@@ -8,9 +8,8 @@
 
     template: `
       <section>
-        <p> {{$ctrl.post.title}}</p>
+        <h5> {{$ctrl.post.title}}</h5>
         <p>{{$ctrl.post.content}}</p>
-
       </section>
     
     `

@@ -2,9 +2,10 @@
 {
   const social = {
     template: `
-      <button ng-click="" type="button">New Thought</button>
-      <post ng-repeat="post in $ctrl.posts" post="post"></post>
-      <post-form on-submit="$ctrl.onSubmit(newPost);"></post-form>
+    <post-form on-submit="$ctrl.onSubmit(newPost);"></post-form> 
+    <section>
+      <post ng-repeat="post in $ctrl.posts" post="post" id="main-content"></post>
+    </section>
     `,
     controller: function() {
       const vm = this;
@@ -28,15 +29,12 @@
           content: newPost.content
         });
       };
-
-      vm.formOpen = () => {
-
-      }
-      console.log(vm.posts);
     }
-  };
+  }
   
   angular
     .module("app")
     .component("social", social);
-}
+ }
+
+       // Line 7: post="post" just means that you want to repeat individual objects. 

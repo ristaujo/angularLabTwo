@@ -5,10 +5,13 @@ function expand() {
     restrict: "A",
     link: function($scope, $element, $attrs) {
       $element.on("focus", () => {
-        $element.css("height", "500px");
+        $element.css("width", "300px");
+        $element.css("height", "100px");
       });
       $element.on("blur", () => {
-        $element.css("height", "200px");
+        $element.css("width", "initial");
+        $element.css("height", "initial");
+
       });
     }
   }
